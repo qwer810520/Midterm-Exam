@@ -21,6 +21,8 @@ class MovieTableViewController: UITableViewController {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        navigationItem.backBarButtonItem = UIBarButtonItem(title: "本週新片", style: .plain, target: nil, action: nil)
+
     }
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -38,6 +40,15 @@ class MovieTableViewController: UITableViewController {
         cell.timeLabel!.text = "上映日期: \(movie[indexPath.row].time)"
         
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let segue = segue.destination as! DetailViewController
+        if let indexPath = self.tableView.indexPathForSelectedRow {
+            segue.movieName = "\(movie[indexPath.row].message)"
+            segue.inputMovieImage = "\(movie[indexPath.row].image)"
+            segue.navigationItem.title = "\(movie[indexPath.row].name)"
+        }
     }
 
     /*

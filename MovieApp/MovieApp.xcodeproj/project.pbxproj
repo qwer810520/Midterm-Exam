@@ -15,6 +15,7 @@
 		39A17F7D1E850010002910E9 /* MovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A17F7C1E850010002910E9 /* MovieTableViewController.swift */; };
 		39A17F7F1E85006E002910E9 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A17F7E1E85006E002910E9 /* Movie.swift */; };
 		39A17F811E8505D6002910E9 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A17F801E8505D6002910E9 /* MovieTableViewCell.swift */; };
+		39A17F831E850BC2002910E9 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39A17F821E850BC2002910E9 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		39A17F7C1E850010002910E9 /* MovieTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewController.swift; sourceTree = "<group>"; };
 		39A17F7E1E85006E002910E9 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		39A17F801E8505D6002910E9 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		39A17F821E850BC2002910E9 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				39A17F7C1E850010002910E9 /* MovieTableViewController.swift */,
 				39A17F7E1E85006E002910E9 /* Movie.swift */,
 				39A17F801E8505D6002910E9 /* MovieTableViewCell.swift */,
+				39A17F821E850BC2002910E9 /* DetailViewController.swift */,
 			);
 			path = MovieApp;
 			sourceTree = "<group>";
@@ -149,6 +152,7 @@
 				39A17F811E8505D6002910E9 /* MovieTableViewCell.swift in Sources */,
 				394C876F1E84EECA00FC4FE3 /* AppDelegate.swift in Sources */,
 				39A17F7F1E85006E002910E9 /* Movie.swift in Sources */,
+				39A17F831E850BC2002910E9 /* DetailViewController.swift in Sources */,
 				39A17F7B1E84F2EA002910E9 /* signatureViewController.swift in Sources */,
 				39A17F7D1E850010002910E9 /* MovieTableViewController.swift in Sources */,
 			);

@@ -191,7 +191,7 @@
                                     <outlet property="movieimage" destination="DkO-bh-o7E" id="6Ld-f0-xli"/>
                                     <outlet property="nameLabel" destination="qek-Vr-J34" id="SQG-e7-RoJ"/>
                                     <outlet property="timeLabel" destination="9up-vf-lbB" id="1Yv-us-baZ"/>
-                                    <segue destination="ZY5-dP-PeI" kind="show" id="lpo-TF-Jxd"/>
+                                    <segue destination="ZY5-dP-PeI" kind="show" identifier="showDetail" id="lpo-TF-Jxd"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="1261.5999999999999" y="-384.55772113943033"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="8IZ-y2-Yc8">
             <objects>
-                <viewController id="ZY5-dP-PeI" sceneMemberID="viewController">
+                <viewController id="ZY5-dP-PeI" customClass="DetailViewController" customModule="MovieApp" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0TU-NH-kFr"/>
                         <viewControllerLayoutGuide type="bottom" id="5iH-kO-iCL"/>
@@ -217,8 +217,37 @@
                     <view key="view" contentMode="scaleToFill" id="mii-Xh-6dy">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hE4-Se-CgB">
+                                <rect key="frame" x="87" y="94" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="HD5-Rp-y7c"/>
+                                    <constraint firstAttribute="width" constant="200" id="pjm-NZ-Atm"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgi-CV-XmL">
+                                <rect key="frame" x="37" y="314" width="300" height="204"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="6Dk-WH-U1k"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jgi-CV-XmL" firstAttribute="top" secondItem="hE4-Se-CgB" secondAttribute="bottom" constant="20" id="D75-Os-yi1"/>
+                            <constraint firstItem="5iH-kO-iCL" firstAttribute="top" secondItem="Jgi-CV-XmL" secondAttribute="bottom" constant="100" id="PUf-rA-JXJ"/>
+                            <constraint firstItem="hE4-Se-CgB" firstAttribute="centerX" secondItem="mii-Xh-6dy" secondAttribute="centerX" id="V54-VX-WP5"/>
+                            <constraint firstItem="hE4-Se-CgB" firstAttribute="top" secondItem="0TU-NH-kFr" secondAttribute="bottom" constant="30" id="cmy-pq-av1"/>
+                            <constraint firstItem="Jgi-CV-XmL" firstAttribute="centerX" secondItem="mii-Xh-6dy" secondAttribute="centerX" id="xPD-QW-NcT"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="Jgi-CV-XmL" id="u9E-ov-9ut"/>
+                        <outlet property="movieImage" destination="hE4-Se-CgB" id="oLR-Gg-2Qg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fSo-JJ-fzg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
